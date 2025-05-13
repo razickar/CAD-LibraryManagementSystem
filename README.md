@@ -3,7 +3,7 @@ Project :- Library Management System
 
 Title :- Knowledge-Hub
 
-Type :- B2C
+Type :- B2B
 
 Target audience :- [students, teachers, book lovers, researchers, casual readers, library members]
 
@@ -39,4 +39,93 @@ Feasibility :-
 	-due date notifications
 	-add ,remove ,etc by admin
 	-role-based access
+## DATA MODEL :
+      Registration class:
+
+Username: String
+Password: String
+Email: String
+FullName: String
+Address: String
+PhoneNumber: String
+
+Login class:
+
+Username: String
+Password: String
+
+BookSearch class:
+
+Keyword: String
+Author: String
+Category: String
+PublicationYear: Integer
+IsAvailable: Boolean
+
+Book class:
+
+BookId: Integer
+Title: String
+Author: String
+ISBN: String
+Category: String
+PublicationYear: Integer
+AvailableCopies: Integer
+
+BorrowRecord class:
+
+BorrowId: Integer
+UserId: Integer
+BookId: Integer
+BorrowDate: Date
+DueDate: Date
+ReturnDate: Date
+IsReturned: Boolean
+
+Favorite class:
+
+FavoriteId: Integer
+UserId: Integer
+BookId: Integer
+AddedDate: Date
+
+Review class:
+
+ReviewId: Integer
+UserId: Integer
+BookId: Integer
+Rating: Integer
+Comment: String
+ReviewDate: Date
+
+BorrowHistory class:
+
+UserId: Integer
+BookList: List<BorrowRecord>
+TotalBorrowed: Integer
+
+Notification class:
+
+NotificationId: Integer
+UserId: Integer
+Message: String
+DueDate: Date
+IsRead: Boolean
+
+AdminAction class:
+
+ActionId: Integer
+AdminId: Integer
+ActionType: String
+TargetId: Integer
+ActionDate: Date
+
+User class:
+
+UserId: Integer
+Username: String
+Password: String
+Email: String
+Role: String
+IsActive: Boolean
 
