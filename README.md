@@ -40,92 +40,92 @@ Feasibility :-
 	-add ,remove ,etc by admin
 	-role-based access
 ## DATA MODEL :
-      Registration class:
+Registration class:
 
-Username: String
-Password: String
-Email: String
-FullName: String
-Address: String
-PhoneNumber: String
+	Username: String
+	Password: String
+	Email: String
+	FullName: String
+	Address: String
+	PhoneNumber: String
 
 Login class:
 
-Username: String
-Password: String
+	Username: String
+	Password: String
 
 BookSearch class:
 
-Keyword: String
-Author: String
-Category: String
-PublicationYear: Integer
-IsAvailable: Boolean
+	Keyword: String
+	Author: String
+	Category: String
+	PublicationYear: Integer
+	IsAvailable: Boolean
 
 Book class:
 
-BookId: Integer
-Title: String
-Author: String
-ISBN: String
-Category: String
-PublicationYear: Integer
-AvailableCopies: Integer
+	BookId: Integer
+	Title: String
+	Author: String
+	ISBN: String
+	Category: String
+	PublicationYear: Integer
+	AvailableCopies: Integer
 
 BorrowRecord class:
 
-BorrowId: Integer
-UserId: Integer
-BookId: Integer
-BorrowDate: Date
-DueDate: Date
-ReturnDate: Date
-IsReturned: Boolean
+	BorrowId: Integer
+	UserId: Integer
+	BookId: Integer
+	BorrowDate: Date
+	DueDate: Date
+	ReturnDate: Date
+	IsReturned: Boolean
 
 Favorite class:
 
-FavoriteId: Integer
-UserId: Integer
-BookId: Integer
-AddedDate: Date
+	FavoriteId: Integer
+	UserId: Integer
+	BookId: Integer
+	AddedDate: Date
 
 Review class:
 
-ReviewId: Integer
-UserId: Integer
-BookId: Integer
-Rating: Integer
-Comment: String
-ReviewDate: Date
+	ReviewId: Integer
+	UserId: Integer
+	BookId: Integer
+	Rating: Integer
+	Comment: String
+	ReviewDate: Date
 
 BorrowHistory class:
 
-UserId: Integer
-BookList: List<BorrowRecord>
-TotalBorrowed: Integer
+	UserId: Integer
+	BookList: List<BorrowRecord>
+	TotalBorrowed: Integer
 
 Notification class:
 
-NotificationId: Integer
-UserId: Integer
-Message: String
-DueDate: Date
-IsRead: Boolean
+	NotificationId: Integer
+	UserId: Integer
+	Message: String
+	DueDate: Date
+	IsRead: Boolean
 
 AdminAction class:
 
-ActionId: Integer
-AdminId: Integer
-ActionType: String
-TargetId: Integer
-ActionDate: Date
+	ActionId: Integer
+	AdminId: Integer
+	ActionType: String
+	TargetId: Integer
+	ActionDate: Date
 
 User class:
 
-UserId: Integer
-Username: String
-Password: String
-Email: String
-Role: String
-IsActive: Boolean
+	UserId: Integer
+	Username: String
+	Password: String
+	Email: String
+	Role: String
+	IsActive: Boolean
 
