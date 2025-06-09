@@ -40,6 +40,7 @@ Feasibility :-
 	-add ,remove ,etc by admin
 	-role-based access
 ## DATA MODEL :
+
 RegistrationInfo: Class
 	●LibrarianId: Integer
 	●FirstName: String
@@ -50,9 +51,11 @@ RegistrationInfo: Class
 	●ConfirmPassword: String
 	●UserName: String
 	●DOB: String
+ 
 Login: Class
 	●UserName: String
 	●Password: String
+
 Library: Class
 	●ID: Integer
 	●Name: String
