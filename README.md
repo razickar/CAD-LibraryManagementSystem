@@ -42,15 +42,15 @@ Feasibility :-
 ## DATA MODEL :
 
 RegistrationInfo: Class
-	●-LibrarianId: Integer
-	●-FirstName: String
-	●LastName: String
-	●MobileNo: Long/String
-	●EmailId: String
-	●Password: String
-	●ConfirmPassword: String
-	●UserName: String
-	●DOB: String
+	-LibrarianId: Integer
+	-FirstName: String
+	-LastName: String
+	-MobileNo: Long/String
+	-EmailId: String
+	-Password: String
+	-ConfirmPassword: String
+	-UserName: String
+	-DOB: String
  
 Login: Class
 	●UserName: String
