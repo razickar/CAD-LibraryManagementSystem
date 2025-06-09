@@ -40,92 +40,83 @@ Feasibility :-
 	-add ,remove ,etc by admin
 	-role-based access
 ## DATA MODEL :
-Registration class:
-
-	Username: String
-	Password: String
-	Email: String
-	FullName: String
-	Address: String
-	PhoneNumber: String
-
-Login class:
-
-	Username: String
-	Password: String
-
-BookSearch class:
-
-	Keyword: String
-	Author: String
-	Category: String
-	PublicationYear: Integer
-	IsAvailable: Boolean
-
-Book class:
-
-	BookId: Integer
-	Title: String
-	Author: String
-	ISBN: String
-	Category: String
-	PublicationYear: Integer
-	AvailableCopies: Integer
-
-BorrowRecord class:
-
-	BorrowId: Integer
-	UserId: Integer
-	BookId: Integer
-	BorrowDate: Date
-	DueDate: Date
-	ReturnDate: Date
-	IsReturned: Boolean
-
-Favorite class:
-
-	FavoriteId: Integer
-	UserId: Integer
-	BookId: Integer
-	AddedDate: Date
-
-Review class:
-
-	ReviewId: Integer
-	UserId: Integer
-	BookId: Integer
-	Rating: Integer
-	Comment: String
-	ReviewDate: Date
-
-BorrowHistory class:
-
-	UserId: Integer
-	BookList: List<BorrowRecord>
-	TotalBorrowed: Integer
-
-Notification class:
-
-	NotificationId: Integer
-	UserId: Integer
-	Message: String
-	DueDate: Date
-	IsRead: Boolean
-
-AdminAction class:
-
-	ActionId: Integer
-	AdminId: Integer
-	ActionType: String
-	TargetId: Integer
-	ActionDate: Date
-
-User class:
-
-	UserId: Integer
-	Username: String
-	Password: String
-	Email: String
-	Role: String
-	IsActive: Boolean
-
+RegistrationInfo: Class
+	●LibrarianId: Integer
+	●FirstName: String
+	●LastName: String
+	●MobileNo: Long/String
+	●EmailId: String
+	●Password: String
+	●ConfirmPassword: String
+	●UserName: String
+	●DOB: String
+Login: Class
+	●UserName: String
+	●Password: String
+Library: Class
+	●ID: Integer
+	●Name: String
+	●Incharge: String
+	●Capacity: Integer
+	●StorageStructure: StorageStructure
+	●Address: String
+	●PhoneNo: Long/String
+	●WifiPassword: String
+	●EmailId: String
+	●OpeningTime: Long
+	●ClosingTime: Long
+	●NoAvailableDays: Integer
+StorageStructure: Class
+	<Your Task>
+Book: Class
+	●Id: String
+	●Name: String
+	●Genre: String
+	●Volume: Byte
+	●PublishedYear: Integer
+	●Author: String
+	●NoOfCopy: Byte
+	●AvailableCount: Byte
+User: Class
+	●UserId: String
+	●FirstName: String
+	●LastName: String
+	●Email: String
+	●MobileNumber: String
+	●Address: String
+	●DOB: String
+	●BorrowedBooks: List<BorrowRecord>
+	●Feedbacks: List<Feedback>
+BorrowRecord: Class
+	●RecordId: String
+	●UserId: String
+	●BookId: String
+	●BorrowDate: Long
+	●DueDate: Long
+	●ReturnId: String
+	●FineAmount: DoubleReturnDetails: Class
+	●ReturnId: String
+	●BorrowRecordId: String
+	●ReturnDate: Long
+	●Feedback: Feedback
+	●FinePaid: Double
+Feedback: Class
+	●FeedbackId: String
+	●UserId: String
+	●BookId: String
+	●Comments: String
+	●Rating: Integer (1–5)
+FinePayment: Class
+	●PaymentId: String
+	●RecordId: String
+	●UserId: String
+	●Amount: Double
+	●PaymentDate: Long
+	●PaymentMethod: String (e.g., "Card", "UPI", "Cash")
+SearchFilter: Class
+	●Name: String
+	●Author: String
+	●Genre: String
+	●PublishedYearFrom: Integer
+	●PublishedYearTo: Integer
+	●AvailableOnly: Boolean
