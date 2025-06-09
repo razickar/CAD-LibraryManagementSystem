@@ -42,8 +42,8 @@ Feasibility :-
 ## DATA MODEL :
 
 RegistrationInfo: Class
-	●LibrarianId: Integer
-	●FirstName: String
+	●-LibrarianId: Integer
+	●-FirstName: String
 	●LastName: String
 	●MobileNo: Long/String
 	●EmailId: String
