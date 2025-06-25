@@ -1,9 +1,13 @@
 package com.zsgs.knowledgehub.features.login;
 
 public class LoginModel {
-
-	public LoginModel() {
+		
+	private final LoginView view;
 	
+	public LoginModel(LoginView view) {
+	
+		this.view = view;
 	}
 
+	
 }

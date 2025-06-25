@@ -2,7 +2,7 @@ package com.zsgs.knowledgehub.features.registration;
 
 public class RegistrationModel {
 	
-	RegistrationView view;
+	private final RegistrationView view;
 	
 	public RegistrationModel(RegistrationView view) {
 		this.view = view;
