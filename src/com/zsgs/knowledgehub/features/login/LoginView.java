@@ -2,7 +2,10 @@ package com.zsgs.knowledgehub.features.login;
 
 import java.util.Scanner;
 
-public class LoginView {
+import com.zsgs.knowledgehub.features.baseview.BaseView;
+import com.zsgs.knowledgehub.features.librarysetup.LibrarySetupView;
+
+public class LoginView extends BaseView {
 	
 	 private final Scanner sc = new Scanner(System.in);
 	private final LoginModel model;
@@ -33,7 +36,7 @@ public class LoginView {
 	}
 
 	private  String getUserName(String string, String invalidMsg) {
-		
+		System.out.println("LOGIN.....");
 		String userName = "";
 		System.out.println(string);
 		do {
@@ -58,6 +61,12 @@ public class LoginView {
 			System.out.println("THANKYOU FOR USING KNOWLWDGEHUB");
 		}
 		
+		
+	}
+
+	public void onSuccessfullLogin(String userName) {
+		System.out.println("LOGIN SUCCESSFULLY!!!!! "+userName);
+		new LibrarySetupView().init();
 		
 	}
 

@@ -14,7 +14,7 @@ class LoginModel {
 
 	 void ValidateCredential(String userName, String password) {
 		if(KnowledgeHubDb.getInstance().isValidCrediential(userName,password)) {
-			new LibrarySetupView();
+			view.onSuccessfullLogin(userName);
 		}
 		else {
 			view.invalidCretentialMsg();

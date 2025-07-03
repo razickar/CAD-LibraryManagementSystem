@@ -1,7 +1,7 @@
 package com.zsgs.knowledgehub.repository.dto;
 
 public class RegistrationInfo {
-	private int LibrarianId;
+	private Integer LibrarianId;
 	private String FirstName;
     private String LastName;
     private String MobileNo;
@@ -11,7 +11,7 @@ public class RegistrationInfo {
     private String UserName;
     private String DOB;
     
-    public int getLibrarianId() {
+    public Integer getLibrarianId() {
 		return LibrarianId;
 	}
 	public void setLibrarianId(int librarianId) {

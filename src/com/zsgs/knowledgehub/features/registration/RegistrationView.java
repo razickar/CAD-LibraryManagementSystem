@@ -2,10 +2,11 @@ package com.zsgs.knowledgehub.features.registration;
 
 import java.util.Scanner;
 
+import com.zsgs.knowledgehub.features.baseview.BaseView;
 import com.zsgs.knowledgehub.features.login.LoginView;
 import com.zsgs.knowledgehub.repository.dto.RegistrationInfo;
 
-public class RegistrationView {
+public class RegistrationView extends BaseView {
 
 	  private final Scanner sc = new Scanner(System.in);
 	
@@ -26,7 +27,7 @@ public class RegistrationView {
 	}
 
 	public void proceedRegistrstion() {
-		
+		System.out.println("REGISTRATION...");
 		RegistrationInfo info = new RegistrationInfo();
 		System.out.println("ENTER FIRST NAME");
 		info.setFirstName(sc.nextLine());
@@ -37,7 +38,7 @@ public class RegistrationView {
 		
 		info.setPassword(getPassword());
 		System.out.println("CoNFIRM PASSWORD");
-		info.setConfirmPassword(sc.nextLine());
+		info.setConfirmPassword(getPassword());
 		
 		model.registerUser(info); 
 			
