@@ -1,5 +1,6 @@
 package com.zsgs.knowledgehub.repository.dto;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class User {
@@ -10,8 +11,18 @@ public class User {
     private String MobileNumber;
     private String Address;
     private String DOB;
-   // private List<BorrowRecord> BorrowedBooks;
-    private List<Feedback> Feedbacks;
+    private List<BorrowRecords> BorrowedBooks ;
+    
+    	public User() {
+    		BorrowedBooks = new ArrayList<>();
+    	}
+    public List<BorrowRecords> getBorrowedBooks() {
+		return BorrowedBooks;
+	}
+	public void setBorrowedBooks(BorrowRecords borrowedBooks) {
+		this.BorrowedBooks.add(borrowedBooks);
+	}
+	private List<Feedback> Feedbacks;
 	public String getUserId() {
 		return UserId;
 	}

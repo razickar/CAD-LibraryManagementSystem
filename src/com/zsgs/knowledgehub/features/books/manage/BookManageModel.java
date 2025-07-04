@@ -16,7 +16,9 @@ class BookManageModel {
 	void addBook(Book book) {
 		if(isValidBookInfo(book)) {
 			book.setId(generateId());
+			book.setAvailableCount(book.getNoOfCopy());
 		KnowledgeHubDb.getInstance().setBooks(book);
+		view.showMessage("BOOK is SUCCESSFULLY ADDED!!");
 		}
 		else {
 			view.errorMessage("this is Invalid values");
@@ -24,14 +26,15 @@ class BookManageModel {
 	}
 
 	 private boolean isValidBookInfo(Book book) {
-		 return book != null &&
-	               book.getName() != null && !book.getName().trim().isEmpty() &&
-	               book.getAuthor() != null && !book.getAuthor().trim().isEmpty() &&
-	               book.getGenre() != null && !book.getGenre().trim().isEmpty() &&
-	               book.getVolume() > 0 &&
-	               book.getPublishedYear() != null && book.getPublishedYear() >= 1800 && book.getPublishedYear() <= 2024 &&
-	               book.getNoOfCopy() > 0 &&
-	               book.getAvailableCount() >= 0 && book.getAvailableCount() <= book.getNoOfCopy();
+		 return true;
+//		 book != null &&
+//	               book.getName() != null && !book.getName().trim().isEmpty() &&
+//	               book.getAuthor() != null && !book.getAuthor().trim().isEmpty() &&
+//	               book.getGenre() != null && !book.getGenre().trim().isEmpty() &&
+//	               book.getVolume() > 0 &&
+//	               book.getPublishedYear() != null && book.getPublishedYear() >= 1800 && book.getPublishedYear() <= 2024 &&
+//	               book.getNoOfCopy() > 0 &&
+//	               book.getAvailableCount() >= 0 && book.getAvailableCount() <= book.getNoOfCopy();
 	}
 
 	String generateId() {

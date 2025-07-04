@@ -40,7 +40,7 @@ public class BooksView extends BaseView {
 			System.out.println("6. logout");
 			System.out.println("7. exit..");
 			System.out.println("ENTER YOUR CHOICE");
-			choice = sc.nextLine();
+		choice = sc.nextLine().trim();
 			
 			try {
 				switch(Integer.parseInt(choice)) {
@@ -62,7 +62,7 @@ public class BooksView extends BaseView {
 					break;
 				case 6:
 					new LoginView().init();
-					break;
+					return;
 				case 7:
 					System.exit(0);
 				default:
@@ -90,12 +90,13 @@ public class BooksView extends BaseView {
 		
 		System.out.println("\nAll Books....");
 		System.out.println("_".repeat(50));
-		System.out.printf("%-20s,%-20,%-20s,%-20s,%-20s,%-20s,%-20s,%-20s%n" ,
-				"ID", "Name", "Author", "Genre", "Volume", "Year", "Available");
+		System.out.printf("%-20s %-20s %-20s %-20s %-20s %-20s %-20s%n",
+			    "ID", "Name", "Author", "Genre", "Volume", "Year", "Available");
+
 		System.out.println("_".repeat(50));
 		for(Book book : books) {
 		
-			System.out.printf("%-10s %-30s %-20s %-15s %-10d %-10d %-10d%n",/*EDULA INDHA %N NA NOTE PANNU*/
+			System.out.printf("%-20s%-20s %-20s %-20s %-20d %-20d %-20d%n",/*EDULA INDHA %N NA NOTE PANNU*/
                     book.getId(),
                     book.getName(),
                     book.getAuthor(),

@@ -214,7 +214,7 @@ public class LibrarySetupView extends BaseView {
 			System.out.println("6. exit..");
 			System.out.println("ENTER YOUR CHOICE");
 
-			
+			choice = sc.nextLine().trim();
 			try {
 				switch(Integer.parseInt(choice)) {
 				
@@ -224,9 +224,9 @@ public class LibrarySetupView extends BaseView {
 				case 2:
 					new UsersView().init();
 					return;
-//				case 3:
-//					new BorrowBooksView().init();
-//					return;
+				case 3:
+					new BorrowBooksView().init();
+					return;
 				case 4:
 					new LibraryDetailsView().init();
 					return;

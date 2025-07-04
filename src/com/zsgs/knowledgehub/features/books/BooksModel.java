@@ -17,9 +17,9 @@ class BooksModel {
 	List<Book> books = KnowledgeHubDb.getInstance().getBooks();
 	if(books.isEmpty()) {
 		view.showErrorMsg("There is no books available X");
-	}
+	}else {
 	view.displayBooks(books);
-		
+	}
 	}
 
 }

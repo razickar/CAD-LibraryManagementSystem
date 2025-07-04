@@ -2,6 +2,7 @@ package com.zsgs.knowledgehub.features.librarysetup.details;
 
 import java.util.Scanner;
 
+import com.zsgs.knowledgehub.features.baseview.BaseView;
 import com.zsgs.knowledgehub.features.librarysetup.LibrarySetupView;
 import com.zsgs.knowledgehub.features.login.LoginView;
 import com.zsgs.knowledgehub.repository.dto.LibrarySetup;

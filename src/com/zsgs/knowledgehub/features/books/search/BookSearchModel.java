@@ -22,7 +22,7 @@ class BookSearchModel {
 
 	 void searchByAuthor(String author) {
 
-		 List<Book> books = KnowledgeHubDb.getInstance().getBooks().stream().filter(x->x.getName().toLowerCase().contains(author.toLowerCase())).collect(Collectors.toList());
+		 List<Book> books = KnowledgeHubDb.getInstance().getBooks().stream().filter(x->x.getAuthor().toLowerCase().contains(author.toLowerCase())).collect(Collectors.toList());
 		 view.displayBookSearch(books);
 	 }
 

@@ -35,12 +35,12 @@ public class BookManageView extends BaseView {
 			System.out.println("5. exit..");
 			System.out.println("ENTER YOUR CHOICE");
 
-			
+			choice = sc.nextLine();
 			try {
 				switch(Integer.parseInt(choice)) {
 				
 				case 1:
-					collectBookdata();
+					collectBookdataForAdd();
 					break;
 				case 2:
 					new BooksView().init();
@@ -65,11 +65,14 @@ public class BookManageView extends BaseView {
 		
 	}
 
-	public void collectBookdata() {
+	public void collectBookdataForAdd() {
 		Book book = new Book();
 		book.setId(getId());
+		System.out.println("ENTER BOOK NAME..");
 		book.setName(sc.nextLine().trim());
+		System.out.println("ENTER AUTHOR NAME..");
 		book.setAuthor(sc.nextLine().trim());
+		System.out.println("ENTER GENRE..");
 		book.setGenre(sc.nextLine().trim());
 		book.setVolume(getVolume());
 		book.setPublishedYear(getPublishedYear());
@@ -128,24 +131,16 @@ public class BookManageView extends BaseView {
 	            
 	            // Check if input is empty
 	            if (input.isEmpty()) {
-	                System.out.print("Year cannot be empty! Please enter year (00-99): ");
+	                System.out.print("Year cannot be empty!  ");
 	                continue;
 	            }
 	            
-	         
-	            int tempYear = Integer.parseInt(input);
-	            
-	          
-	            if (tempYear < 0 || tempYear > 99) {
-	                System.out.print("Invalid year! Please enter last 2 digits (00-99): ");
-	                continue;
-	            }
-	            
-	            year = tempYear;
+	     
+	            year =  Integer.parseInt(input);
 	            break;
 	            
 	        } catch (NumberFormatException e) {
-	            System.out.print("Invalid input! Please enter a valid year (00-99): ");
+	            System.out.print("Invalid input! Please enter a valid year  ");
 	        }
 	    }
 	    
